@@ -1,0 +1,49 @@
+## RDS
+subnet groups
+Create à DB subnet group
+-> give name
+-> Vpc -> Select VpC
+L> Add Subuets
+Availiabilitg zone
+chose zone la, Ib
+select subnets la and 1b.
+create
+Databases
+create databases
+Engines Options
+-> Choose MysaL
+' Templates
+-> choose free tier
+L> DB instance identifier
+-> Give name
+
+ Master UserName
+Abhishek
+ Masters Passowrd
+1234
+Allocated Stooage
+20 Gib
+Uncheck euable storage autoscaling 
+choose UPC
+Public access
+Yes
+Vpc security  group (firewall)
+Choose existing
+Existing  vPC security group
+Chose VPC
+
+Availability zone
+Choose sone 1-a
+Additional config
+ Intial database name
+> student DB give name
+Backup netentin period
+O
+Create  database
+
+Go to MysaL worKbeuch on your computes
+My saL Connection +
+Give connection name
+"Hostname is your aws Endpoint
+Lousemame - - Aditsa
+Password - - store in vault -> give password)
