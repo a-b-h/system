@@ -1,0 +1,903 @@
+Qus1 Create a Linux server and run HTML code there.
+
+create one Linux server and then connect it and run the following commands
+
+#sudo -i
+
+#yum install httpd
+
+#service httpd restart
+
+#cd /var/www/html
+
+#vim test.html
+
+   press i
+
+    insert html code
+
+    press esc
+
+    enter :wq and press enter 
+
+go to ec2 and copy the public ip then paste it in google and add /test.html
+
+-______________________________________________________________________________
+
+Qus2 Create a Ubuntu server and run R code there.
+
+create one Ubuntu server and then connect it and run the following commands
+
+#sudo apt-get dist-upgrade
+
+#sudo apt-get upgrade
+
+#sudo su
+
+#apt-get update
+
+#apt-get install r-base
+
+#R
+
+copy paste the code 
+
+# take input from the user
+nterms = as.integer(readline(prompt="How many terms? "))
+# first two terms
+n1 = 0
+n2 = 1
+count = 2
+# check if the number of terms is valid
+if(nterms <= 0) {
+print("Plese enter a positive integer")
+} else {
+if(nterms == 1) {
+print("Fibonacci sequence:")
+print(n1)
+} else {
+print("Fibonacci sequence:")
+print(n1)
+print(n2)
+while(count < nterms) {
+nth = n1 + n2
+print(nth)
+# update values
+n1 = n2
+n2 = nth
+count = count + 1
+}
+}
+}
+enter the number=5
+
+_________________________________________________________________________________
+
+Qus 3 Create a Windows server and run C code there.
+
+create one Windows server and then connect it
+
+(key format .pem)
+
+security group (RDP) must be there
+
+connect
+
+RDP client
+
+Download remote desktop file
+
+upload ppk file
+
+password
+
+decrypt password
+
+copy paste the password double click on downloaded windows-exam.rdp file
+
+connet
+
+paste password
+
+yes
+download mingw and c program upload in c drive 
+install all packages
+go to c folder and bin copy the address
+go to system env ->system varaible ->path->new->paste ->ok
+open cmd
+cd..
+cd..
+c:/
+gcc --version
+gcc hello.c -o hello.exe
+hello.exe
+
+OR
+
+download cod->e blocks
+
+file
+
+new project
+
+console application
+
+sample project name 
+
+select folder
+
+next
+
+next
+
+sample
+
+main.c
+
+run now
+
+_____________________________________________________________________
+
+Qus 4 . Create S3 bucket and upload files there.
+
+create s3 bucket and upload and delete files there.
+
+Qus 5. Create an AMI image and Instance for that AMI image.
+
+select a running instance 
+
+go to action 
+
+image and templates
+
+image
+
+name image 
+
+description
+
+create image
+
+go to images 
+
+select AMI
+
+click on lunch an instance 
+
+select key pair
+
+select security group 
+
+enable public access
+
+launch/create
+
+wait and retry 
+
+Qus. 6 Load Balancer
+
+first create two instances with same kay and same security
+
+Run Test pages on these two Instances with ip address
+
+Then go to load balancer
+
+Create New Load Balancer
+
+classic load bbalancer
+
+    create
+
+Load balancer name
+
+choose Vpc
+
+Load Balancer Protocol
+
+    select TCP 80
+
+Select two availabe Subnets
+
+click on next
+
+Select Security Group
+
+Next 
+
+Next
+
+Advance Details
+
+interval chnage from 30 to 60
+
+chnage Healthy Threshold 10  to 2
+
+next
+
+Select Those two Instances
+
+Next
+
+Next
+
+Refresh the test pages
+
+inservice
+
+Test -2 
+
+Qus 1 Host a web Application  with the help of  FileZilla.
+
+create one Linux Sever and run the Queries on Console'
+
+sudo -i
+
+yum install httpd
+
+service httpd start
+
+yum install php php-mysql
+
+service httpd restart
+
+sudo chmod 777 /var/www/html
+
+Open FileZilla
+
+My Site 
+
+    new site
+
+    select SFTP protocol
+
+    give ip in the host
+
+    logon type < Select Key File
+
+    user- ec2-user
+
+    upload key file
+
+Connect
+
+remote site click on /
+
+go to var
+
+go to www
+
+go to html
+
+upload html file here
+
+then 
+
+go to web Browser
+
+paste ip address and then /test.html
+_______________________________________________________________________________
+
+Qus 2. RDS database creation.
+
+Go to RDS and Subnet Group
+
+Create Subnet Group
+
+    name
+
+    Description
+
+    Select VPC
+
+    Choose Availability Zone
+
+    Choose Subnet
+
+  Create
+
+Go to VPC and Edit Vpc 
+
+Enable DNS HOst name
+
+RDS
+
+Parameter Group
+
+Create Parameter Group
+
+Parameter Group Family
+
+    select mySql8.0
+
+    Group Name
+
+    Description
+
+Create
+
+select Created Parameter Group
+
+Edit
+
+search char
+
+change set_client - utf-8
+
+    set_Connect -utf-8
+
+    set_dtabase utf-8
+
+    set_results utf-8
+
+    set_server utf-8
+
+Go To Database Create DataBase
+
+standard Create
+
+select mysql 
+
+smySQl 8.0.28
+
+Free tier
+
+Master- username
+
+Password
+
+Storage Auto scalling Disable
+
+Select VPC
+
+Select Db Subnet Group
+
+Public Access Yes
+
+Choose Security Group
+
+Choose Availability Zone
+
+Additional Configuration
+
+    Database Name
+
+    Select Parameter Group
+
+ Auto back up Period 
+
+ 7 to 0
+
+Create Database
+
+Goto my Sql Workbench
+
+    New Connections
+
+        connection name
+
+        Hostname- Paste EndPoint here
+
+        Username- master
+
+test Connection
+
+Password
+
+Run command if asked to do on putty
+
+    sudo -i
+
+    mysql -u master -p -h endpoint -P 3306
+
+    pwd-master1234
+
+    use stdatabase;
+
+    select * from login;
+
+make a php file if asked to run on instance host 
+
+#sudo -i
+
+#yum install httpd
+
+#service httpd restart
+
+#cd /var/www/html
+
+#vim test.php
+
+   press i
+
+    insert php code( in code chnage end point database name password table name and columns name)
+
+    <!DOCTYPE html>
+
+<html>
+
+<body>
+
+<?php
+
+$servername = "database-1.ch8px2hflgli.ap-south-1.rds.amazonaws.com";
+
+$username = "master";
+
+$password = "master1234";
+
+$dbname = "mydatabase";
+
+// Create connection
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+
+if ($conn->connect_error) {
+
+    die("Connection failed: " . $conn->connect_error);
+
+}
+
+$sql = "SELECT * from login";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+    // output data of each row
+
+    while($row = $result->fetch_assoc()) {
+
+        echo "<br> Userid: ". $row["userid"]. " - Password: ". $row["pwd"]. "<br>";
+
+    }
+
+} else {
+
+    echo "0 results";
+
+}
+
+$conn->close();
+
+?>
+
+</body>
+
+</html>
+
+    press esc
+
+    enter :wq and press enter 
+
+go to Web Browser and paste ip/test.php
+
+_________________________________________________________________________________________________________
+
+Qus 3.Retrive data from db server by running php code on local dwsktop server.( Xampp Server Local)
+
+go to XAMPP
+
+start 
+
+start
+
+then go to c file then xempp then htdocs here put the php connection code file then go to web browser and type localhost:80/test.php
+
+________________________________________________________________________________
+Qus 4. Dynamo DB
+
+Go to Dynamo DB
+
+Create Table
+
+table name
+
+columns name
+
+create table
+
+click on table name
+
+ Actions
+
+    create item
+
+        Give Name Give Password
+
+add more 
+
+then download CSV
+
+_________________________________________________________________________________________
+
+Qus 5. New User IAM User S3 Bucket
+
+go to IAM
+
+users
+
+Add User
+
+User name
+
+Select Provide user........
+
+select i want to create an IAM user
+
+select Custom Password and enter password
+
+untick user MUST create  a new password
+
+Create group
+
+group name
+
+amazons3 full access
+
+next
+
+create user
+
+copy link and paste login and there create s3 bucket
+
+_______________________________________------------------------------------------
+
+Qus 6 EMR 
+
+go to s3 bucket and create new bucket and put three files there
+
+go to EMR
+
+clusters
+
+Create Clusters
+
+go to advance options
+
+    select type streaming program
+
+        Add Step
+
+            Name:
+
+            mapper :select mapper file in bukcet
+
+            reducer:select Reducer File in buket
+
+            Input : select input file in bucket
+
+            output: select that folder in bucket then /Output
+
+    Add
+
+Next
+
+    Networkiing
+
+        Network Select VPC
+
+            Select Subnet
+
+Next
+
+Next
+
+Select Key pair
+
+Create Cluster
+
+in securtiy group chnage in inbound and out bound rules all traffic and ssh
+
+refresh cluster
+
+click on connect to master using ssh
+
+copy fro haddop and paste into puttty host and then add key pair inn ssh auoth 
+
+then go to cluster 
+
+Steps
+
+expand steps
+
+Copy Arguments 
+
+chnage in the arguments 'python wcmapper.py' 'python wcreducer.py'
+
+hadoop-streaming -files s3://emr-bukcet-exam-001/wcmapper.py,s3://emr-bukcet-exam-001/wcreducer.py -mapper 'python wcmapper.py' -reducer 'python wcreducer.py' -input s3://emr-bukcet-exam-001/input.txt -output s3://emr-bukcet-exam-001/Output
+
+paste the above in putty
+
+go to s3 bucket in output there are two files download the files
+______________________________________________________________________________
+
+Qus 7 MsSql
+
+go to RDS
+
+create Database
+
+Standard Create
+
+select Microsoft Sql Server
+
+Master
+
+password
+
+Select VPC
+
+Select Db Subnet Group
+
+Public Access Yes
+
+Choose Security Group
+
+Choose Availability Zone
+
+Create 
+
+wait for 20 minutes
+
+Download SSMS
+
+Open SSMS
+
+Server Name: paste End Point
+
+Authentication: select Sql server
+
+login - name like master
+
+password
+
+click on connect
+
+new Query
+
+run every query
+
+create database database1;
+
+use database1;
+
+create table login(id int,name varchar(25));
+
+insert into login values(1,'ashok'),(2,'divya');
+
+select * from login;
+
+________________________________-_______________________________________________________
+
+Qus 8 Autoscalling with Load balancer
+
+Normal Autoscaling  and autoscaling with load balancer
+
+First create a linux instance and
+
+then select instance and action > image and template >image >create image
+
+image name create image
+
+Go to autoscaling
+
+Launch configuration
+
+Create launch template
+
+Name of the template
+
+Provide guidance -click
+
+Quick start- aws linux
+
+Instance type t2 micro free tier
+
+Key pair selection
+
+Subnet -dont include
+
+Select security group
+
+Click Create launch template
+
+
+
+Create launch configure
+
+Launch configuration name
+
+Ami selection select created image
+
+Instance type- t2 micro
+
+
+
+Security grp Rules- all traffic -anywhere
+
+Key pair-proceed without keypair
+
+I ack…
+
+Click launch config
+
+
+
+Now go to autoscaling group
+
+Create autoscaling grp- name
+
+Launch template (select the created template)
+
+Next
+
+Network -select vpc-select 2 subnet (a and b zone)
+
+Create new target grp
+
+Next
+
+No load balancer(for only autoscaling)
+
+For autoscaling with load balncer(choose- create a new loadbalancer )
+
+Next
+
+Group size
+
+2
+
+1
+
+3
+
+Scaling policies
+
+Select Target tracking scaling policy
+
+Avg cpu utiliztion
+
+Target value =90
+
+Skip to the review and 
+
+Next 
+
+Next
+
+create autoscaling grp
+___________________________________________________________________________
+
+
+Qus 9 . Eclipse JDBC data retrieve from my sql
+
+Run   rds connect to my sql create database table etc..
+
+Make sure u have sj folder
+
+Insatll jre and jdk
+
+Click on eclipse 
+
+Click on normal java program icon right corner
+
+File > new > java project> name > finish
+
+Right Click on created project >new> java class fille and click on public static void main
+
+Click on src >.java file
+
+Only package name should be there delete rest of the lines
+
+Edit dbname,password, hostname, and query in below program
+
+
+
+import java.sql.*;  
+
+
+
+public class JDBClass {
+
+ 
+
+public static void main(String args[]){  
+
+try{  
+
+Class.forName("com.mysql.cj.jdbc.Driver");  
+
+String dbName = "RONdb";
+
+    String userName = "admin";
+
+    String password = "admin123";
+
+    String hostname = "rondb.c93fxu82udnu.ap-south-1.rds.amazonaws.com";
+
+    String port ="3306";
+
+    String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName + "&password=" + password;
+
+    Connection con = DriverManager.getConnection(jdbcUrl);
+
+    if (con != null) {
+
+         System.out.println("Connected to the database test1");
+
+     }
+
+Statement stmt=con.createStatement();  
+
+ResultSet rs=stmt.executeQuery("select * from RONdb.student");  
+
+while(rs.next())  
+
+System.out.println(rs.getInt(1)+"  "+rs.getString(2));  
+
+con.close();  
+
+}catch(Exception e){ System.out.println(e);}  
+
+}  
+
+}
+
+
+
+Right click on progarm > run as java program
+
+if not working then mysql.cj.jdbc.Driver class not found error is there
+
+then download sql connetor jar file from ashokmahala git cloud repositry and 
+
+right click on project > build path > configure Build path >libraries
+
+add external jar file 
+
+select downloaded sql connector jar file
+
+apply and save 
+
+now run the program if some error is still there then 
+
+download sql installer
+
+and install all the plugins
+
+________________________________________________________________________________
+
+
+Qus 10. JSP program
+
+
+
+Run an instance in rds connect to my sql create database table etc..
+
+Make sure u have sj folder
+
+Install jre and jdk
+
+Click on eclipse 
+
+Click on java ee program icon right corner
+
+File > new >  dynamic web project > name and select tomcat server 8.0  in new run time and download tomcat 8.0 in a directory > finish
+
+Click on created  > web content  right click on web content > new > other >jsp file >next finish 
+
+addd <p> Hello World </p> in body 
+
+Right click> run as >run on server
+
+next> select the project created>finish
+
+If u get error then
+
+Click on window >show view >servers> double click on the tomcat server>
+
+Change the port number of the respective port shown in  the error
+
+Again right click>run as> run on server
